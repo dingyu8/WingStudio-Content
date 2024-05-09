@@ -1,0 +1,888 @@
+/* 头部区域 */
+.win-head-big {
+    display: block; 
+    /* font-size: 40px; */
+    width: 100%;
+    position: fixed;
+    /* position: sticky; */
+    top: 0px;
+    z-index: 9;
+}
+.win-head-all {
+    display:block; 
+    width:100%; 
+    height: 72px;
+    z-index: 10;
+    /* position: absolute; */
+    left: 0;
+    top: 0;
+    transition: all 0.4s ease;
+}
+.win-head {
+    display:block; 
+    width:1200px; 
+    height: 72px;  
+    margin: 0px auto; 
+    position: relative;
+    z-index: 11;
+    /* background-color: rgb(11, 11, 11); */
+}
+/* logo区域 */
+.win-head .win-logo {
+    /* background-color: aqua; */
+    display:block; 
+    height: 22px; 
+    width: 168px; 
+    position: absolute; 
+    left: 0px; 
+    top: 25px;
+    z-index: 12;
+}
+.win-head .win-logo h1 {
+    display:block; 
+    height: 22px; 
+    width: 168px; 
+    background: url(https://www.tencent.com/img/index/menu_logo.png) no-repeat 0 0;
+    text-indent: -9999px; 
+    overflow: hidden;
+    background-size: 100% 100%;
+    z-index: 13;
+}
+/* 导航区域 */
+.win-nav { 
+    display: block; 
+    height:72px; 
+    position: absolute; 
+    right: 160px; 
+    top: 0px; 
+    cursor: pointer; 
+    opacity: 1; 
+    transition:opacity 0.3s linear;
+    transform: translate(0px,0);
+    z-index: 60;
+}
+.win-nav .win-nav-1 { 
+    display: inline-block; 
+    height:72px;
+    float: none; 
+    margin-left:72px; 
+    position: relative;
+    z-index: 60;
+}
+.win-nav .win-nav-1 .txt { 
+    display: block; 
+    height:72px; 
+    line-height: 72px; 
+    font-size: 16px; 
+    color: #fff; 
+    font-weight: bold; 
+    opacity: 0.95; 
+    transition:color 0.3s linear; 
+    position: relative; 
+    z-index: 80;
+}
+.win-nav .win-nav-1 .txt:hover {  
+    opacity: 1;
+}
+.win-nav .win-nav-1 .txt::after { 
+    display:block; 
+    content:""; 
+    height: 4px; 
+    width: 100%; 
+    position: absolute;
+    bottom: 19px; 
+    left: 0px; 
+    background: #194ac3; 
+    opacity: 0; 
+    transition: transform 0.2s ease-out,opacity 0.2s ease-out; 
+    transform-origin: 50% 0%; 
+    transform:scale(0.01,1);
+}
+.win-nav .win-nav-1 .txt::before { 
+    display:none; 
+    content:""; 
+    height: 400px; 
+    width: 100%; 
+    position: absolute;
+    top: 19px; 
+    left: -10px; 
+    background: #194ac3; 
+    opacity: 1;
+}
+.win-nav .win-nav-1:hover .txt::after { 
+    transform:scale(1,1); 
+    opacity: 1;
+}
+/* .win-nav .win-nav-1 {  */
+    /* display:none; */
+/* } */
+.win-nav .win-nav-1 .menu_hook { 
+    /* display:none;  */
+    width: 100%; 
+    height: 1200px; 
+    position: absolute; 
+    left: -36px; 
+    top: 0px; 
+    z-index: 17;
+}
+
+.en-us .win-nav .win-nav-1 { 
+    margin-left: 60px;
+}
+.en-us .win-nav-2 li a { 
+    padding:10px 0;
+}
+
+.win-nav-2{
+    display: none; 
+    position: absolute; 
+    width:160px; left: 50%; 
+    margin-left: -80px; 
+    text-align: center; 
+    z-index: 18; 
+}
+.win-nav-2 li a{ 
+    display: block; 
+    font-size: 16px; 
+    color: #2b2e2e; 
+    opacity: 0.7; 
+    padding: 13px 0;
+}
+.win-nav-2 li a:hover{ 
+    opacity: 1;
+}
+.win-nav-1:hover ul {
+    display: block;
+}
+/* 头部的语言区域 */
+.win-head-big .win-lan {
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 25px;
+}
+.win-head-big .win-lan a {
+    display: inline-block; 
+    font-size: 16px; 
+    color: #fff; 
+    font-family:"PingFangSC-Regular"; 
+    opacity: 0.9;
+    cursor: pointer;
+}
+.win-head-big .win-lan a:hover {
+    opacity: 0.95;
+}
+.win-head-big .win-lan .win-lan-2 {
+    display: inline-block; 
+    font-size: 12px; 
+    margin: 0px 3px; 
+    position: relative; 
+    top: -2px; 
+    opacity: 0.9;
+    color: #fff;
+}
+/* banner区域 */
+.overall {
+    /* 设置窗口大小 */
+    width: 100%;
+    height: 665px;
+
+    /* 将弹性 <div> 元素的所有项目的居中对齐 */
+    align-items: center;
+
+    /* 设置图片外边距 左右居中 上方5% */
+    margin: 0;
+    padding: 0;    
+}
+
+.content {
+    /* 设置相对定位 */
+    position: relative;
+    height: 800px;
+    width: 100%;
+}
+
+.content ul {
+    /* 去除标签<ul><li></li></ul>默认加的样式 */
+    list-style-type: none;
+}
+
+.content ul>li {
+    width: 100%;
+    height: 900px;
+
+    /* 设置绝对定位 */
+    position: absolute;
+
+    /* 设置过度效果 时间为1s */
+    transition: 1s;
+
+    /* 设置最大透明度 默认一开始图片为透明的 当下面js加载的时候
+        第一张图片设置为不透明
+    */
+    opacity: 0;
+}
+
+/* 设置每个图片的样式 */
+.content ul>li img {    
+    /* 设置每一张图片的大小 */
+    width: 100%;
+    height: 720px;
+
+    /* 设置圆角边框 */
+    /* border-radius: 5%; */
+ 
+    /* 设置边框样式 */
+    /* border: 5px solid #0e0600;         */
+}
+
+/* 设置轮播图下面的小点 */
+.content ol {
+    /* 设置相对定位 */
+    position: relative;
+    width: 1200px;
+    border-bottom: 2px solid #feffff;
+
+    /* 设置网格布局 */
+    /* display: grid; */
+    display: block;
+    padding: 20px;
+    margin: 10px;
+    
+    /* 设置网格布局中的列数及宽度 */
+    /* grid-template-columns: repeat(3, 20px); */
+
+    /* 设置网格布局中的行数及宽度 */
+    /* grid-template-rows: auto; */
+
+    /* 设置网格行与列之间的间隙 */
+    /* 间隙为1em */
+    /* grid-gap: 1em; */
+    /* gap:1em; */
+
+    /* 右浮动 */
+    float: right;
+
+    /* 设置浮点的向上的内边距 */
+    margin-top: 490px;
+
+    /* 去除列表样式 */
+    list-style: none;
+
+    /* 把图像的上边缘设置在其包含元素上边缘之下0px高的位置 */
+    top: 0;
+
+    /* 把图像的左边缘设置在其包含元素上边缘之下0px高的位置 */
+    left: 0;
+    margin-right: 160px;
+}
+
+.content ol li {
+    /* 设置每个小点的大小 */
+    width: 10px;
+    height: 10px;
+
+    /* 设置里面的文字的大小 */
+    font-size: 15px;
+
+    /* line-height 属性设置行间的距离（行高） */
+    line-height: 20px;
+    margin: 16px;
+
+    /* 浮动左对齐 */
+    float: right;
+
+    /* 设置文本居中 */
+    text-align: center;
+
+    /* 把表格做成圆点 */
+    /* border-radius: 2em; */
+
+    /* 设置圆点的边框 */
+    border: 5px solid #f9f7f7;
+}
+/* 轮播图文字 */
+.win-banner-text {
+    display: block;
+    visibility: visible;
+    transform: translateX(0);
+    animation: none;
+    width: 600px;
+    height: 400px;
+    background-color: pink;
+}
+.win-banner-text h2 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+
+}
+.win-banner-text h4 {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+}
+/* 最新动态 */
+/* 最新动态四个字 */
+.zxdt {
+    display: block;
+    width: 300px;
+    height: 34px;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 34px;
+    color: #fdfdfd;
+    /* background-color: chartreuse; */
+    z-index: 20;
+    transition: all 1s;
+    position: relative;
+    top: -45px;
+    left: 162px;
+}
+/* 整个大的板块 */
+.news {
+    width: 1200px;
+    height: 625px;
+    /* background-color: pink; */
+    display: flex;
+    position: relative;
+    top: -24px;
+    margin: 0 auto;
+    justify-content: space-between;
+    z-index: 30;
+}
+/* 左边的新闻 */
+.news .news-1 {
+    width: 800px;
+    height: 625px;
+    background-color: #fdf8f8;
+    /* border: #fff solid 2px; */
+    overflow: hidden;
+}
+/* 左边新闻的图片 */
+.news-1-img {
+    overflow: hidden;
+}
+/* 左边新闻的文字 */
+.news-1-text-time {
+    width: 100px;
+    height: 30px;
+    color: #194ac3;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    /* background-color: #2b2e2e; */
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-top: #194ac3 solid 1px;
+    border-right: #194ac3 solid 1px;
+    border-bottom: #194ac3 solid 1px;
+}
+.news-1-text-content h3 {
+    font-weight: 400;
+    font-size: 24px;
+    color: #2b2e2e;
+    margin: 10px;
+}
+.news-1-text-content p {
+    font-weight: 400;
+    font-size: 18px;
+    color: #2b2e2e;
+    margin: 10px;
+}
+/* 左边新闻的效果 */
+.news-1:hover {
+    transform: translateY(-12px);
+    transition: all 0.3s;
+}
+.news-1-img:hover {
+    transform: scale(1.1);
+    transition: all 0.4s;
+}
+.news-1-text-content h3:hover {
+    color: #194ac3;
+}
+/* 右边的新闻 */
+.news .news-2 {
+    width: 360px;
+    height: 625px;
+    /* background-color: aquamarine; */
+    overflow: hidden;
+}
+/* 右边新闻的图片 */
+
+/* 右边新闻的文字 */
+.news-2-text {
+    display: block;
+    width: 360px;
+    height: 355px;
+    background-color: #05c9f5;
+    margin: 0 auto;
+}
+.news-2-text-time {
+    display: block;
+    width: 140px;
+    height: 30px;
+    color: #fefefe;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    padding-left: 16px;
+    /* margin-top: 10px; */
+    margin-bottom: 18px;
+    /* background-color: #2b2e2e; */
+    /* margin-top: 15px; */
+    /* margin-bottom: 15px; */
+    border-top: #fbfcfd solid 1px;
+    border-right: #fcfdff solid 1px;
+    border-bottom: #fdfeff solid 1px;
+}
+.news-2-text-content h3 {
+    font-weight: 400;
+    font-size: 22px;
+    color: #fcfdfd;
+    margin: 14px;
+}
+.news-2-text-content p {
+    font-weight: 400;
+    font-size: 18px;
+    color: #fafbfb;
+    margin: 14px;
+}
+/* 右边新闻的效果 */
+.news-2:hover {
+    transform: translateY(-12px);
+    transition: all 0.3s;
+}
+.news-2-img:hover {
+    transform: scale(1.1);
+    transition: all 0.4s;
+}
+/* 三个新闻 */
+.win-3news {
+    width: 1200px;
+    height: 560px;
+    /* background-color: pink; */
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    position: relative;
+}
+/* 第一个新闻 */
+.win-3news-1 {
+    width: 350px;
+    height: 560px;
+    background-color: #05c9f5;
+    overflow: hidden;
+}
+.win-3news-1-text {
+    display: block;
+    width: 360px;
+    height: 355px;
+    background-color: #2929bf;
+    margin: 0 auto;
+}
+.win-3news-1-time {
+    display: block;
+    width: 140px;
+    height: 30px;
+    color: #fefefe;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    padding-left: 16px;
+    /* margin-top: 10px; */
+    margin-bottom: 18px;
+    /* background-color: #2b2e2e; */
+    /* margin-top: 15px; */
+    /* margin-bottom: 15px; */
+    border-top: #fbfcfd solid 1px;
+    border-right: #fcfdff solid 1px;
+    border-bottom: #fdfeff solid 1px;
+}
+.win-3news-1-text-content h3 {
+    font-weight: 400;
+    font-size: 22px;
+    color: #fcfdfd;
+    margin: 14px;
+}
+.win-3news-1-text-content p {
+    font-weight: 400;
+    font-size: 18px;
+    color: #fafbfb;
+    margin: 14px;
+}
+/* 第一个新闻的效果 */
+.win-3news-1:hover {
+    transform: translateY(-12px);
+    transition: all 0.3s;
+}
+.win-3news-1-img:hover {
+    transform: scale(1.1);
+    transition: all 0.4s;
+}
+/* 第二个新闻 */
+.win-3news-2 {
+    width: 350px;
+    height: 560px;
+    background-color: #2b2e2e;
+    overflow: hidden;
+}
+.win-3news-2-text {
+    display: block;
+    width: 360px;
+    height: 275px;
+    background-color: #e7e7e7;
+    margin: 0 auto;
+}
+.win-3news-2-time {
+    display: block;
+    width: 140px;
+    height: 30px;
+    color: #194ac3;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    padding-left: 16px;
+    /* margin-top: 10px; */
+    margin-bottom: 18px;
+    /* background-color: #2b2e2e; */
+    /* margin-top: 15px; */
+    /* margin-bottom: 15px; */
+    border-top: #194ac3 solid 2px;
+    border-right: #194ac3 solid 2px;
+    border-bottom: #194ac3 solid 2px;
+}
+.win-3news-2-text-content h3 {
+    font-weight: 400;
+    font-size: 20px;
+    color: #040404;
+    margin: 14px;
+}
+.win-3news-2-text-content p {
+    font-weight: 400;
+    font-size: 18px;
+    color: #050505;
+    margin: 14px;
+}
+/* 第二个新闻的效果 */
+.win-3news-2:hover {
+    transform: translateY(-12px);
+    transition: all 0.3s;
+}
+.win-3news-2-img:hover {
+    transform: scale(1.1);
+    transition: all 0.4s;
+}
+/* 第三个新闻 */
+.win-3news-3 {
+    width: 350px;
+    height: 560px;
+    background-color: #7107f3;
+    overflow: hidden;
+}
+.win-3news-3-text {
+    display: block;
+    width: 360px;
+    height: 275px;
+    background-color: #bab2b2;
+    margin: 0 auto;
+}
+.win-3news-3-time {
+    display: block;
+    width: 140px;
+    height: 30px;
+    color: #194ac3;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    padding-left: 16px;
+    /* margin-top: 10px; */
+    margin-bottom: 18px;
+    /* background-color: #2b2e2e; */
+    /* margin-top: 15px; */
+    /* margin-bottom: 15px; */
+    border-top: #194ac3 solid 2px;
+    border-right: #194ac3 solid 2px;
+    border-bottom: #194ac3 solid 2px;
+}
+.win-3news-3-text-content h3 {
+    font-weight: 400;
+    font-size: 20px;
+    color: #040404;
+    margin: 14px;
+}
+.win-3news-3-text-content p {
+    font-weight: 400;
+    font-size: 18px;
+    color: #050505;
+    margin: 14px;
+}
+/* 第三个新闻的效果 */
+.win-3news-3:hover {
+    transform: translateY(-12px);
+    transition: all 0.3s;
+}
+.win-3news-3-img:hover {
+    transform: scale(1.1);
+    transition: all 0.4s;
+}
+/* 两个新闻 */
+.win-2news {
+    display: flex;
+    width: 1200px;
+    height: 600px;
+    /* background-color: pink; */
+    margin: 15px auto;
+    justify-content: space-between;
+    position: relative;
+}
+/* 新闻一 */
+.win-2news-1 {
+    width: 775px;
+    height: 600px;
+    background-color: #f5f2f2;
+    overflow: hidden;
+}
+.win-2news-1-text {
+    display: block;
+    width: 360px;
+    height: 200px;
+    background-color: #faf9f9;
+    margin: 0 auto;
+}
+.win-2news-1-time {
+    display: block;
+    width: 140px;
+    height: 30px;
+    color: #194ac3;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    padding-left: 16px;
+    margin-top: 10px;
+    margin-bottom: 18px;
+    /* background-color: #2b2e2e; */
+    /* margin-top: 15px; */
+    /* margin-bottom: 15px; */
+    border-top: #194ac3 solid 2px;
+    border-right: #194ac3 solid 2px;
+    border-bottom: #194ac3 solid 2px;
+}
+.win-2news-1-text-content h3 {
+    font-weight: 400;
+    font-size: 20px;
+    color: #040404;
+    margin: 14px;
+}
+.win-2news-1-text-content p {
+    font-weight: 400;
+    font-size: 18px;
+    color: #050505;
+    margin: 14px;
+}
+/* 新闻一的效果 */
+.win-2news-1:hover {
+    transform: translateY(-12px);
+    transition: all 0.3s;
+}
+.win-2news-1-img:hover {
+    transform: scale(1.1);
+    transition: all 0.4s;
+}
+/* 新闻二 */
+.win-2news-2 {
+    width: 350px;
+    height: 600px;
+    /* background-color: blue; */
+    overflow: hidden;
+}
+.win-2news-2-text {
+    display: block;
+    width: 360px;
+    height: 340px;
+    background-color: #2a5ef8;
+    margin: 0 auto;
+}
+.win-2news-2-time {
+    display: block;
+    width: 140px;
+    height: 30px;
+    color: #fbfbfc;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    padding-left: 16px;
+    /* margin-top: 0px; */
+    margin-bottom: 18px;
+    /* background-color: #2b2e2e; */
+    /* margin-top: 15px; */
+    /* margin-bottom: 15px; */
+    border-top: #fefeff solid 2px;
+    border-right: #fdfeff solid 2px;
+    border-bottom: #fdfeff solid 2px;
+}
+.win-2news-2-text-content h3 {
+    font-weight: 400;
+    font-size: 20px;
+    color: #fbfafa;
+    margin: 14px;
+}
+.win-2news-2-text-content p {
+    font-weight: 400;
+    font-size: 18px;
+    color: #fbfbfb;
+    margin: 14px;
+}
+/* 新闻一的效果 */
+.win-2news-2:hover {
+    transform: translateY(-12px);
+    transition: all 0.3s;
+}
+.win-2news-2-img:hover {
+    transform: scale(1.1);
+    transition: all 0.4s;
+}
+/* 公司介绍 */
+.win-about {
+    width: 100%;
+    height: 280px;
+    background-color: #fff;
+    /* vertical-align: middle; */
+    /* vertical-align: auto; */
+    /* display: flex; */
+    /* justify-content: space-around; */
+}
+.win-about-bh {
+    width: 1200px;
+    height: 280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: #bab2b2; */
+    overflow: hidden;
+}
+/* 介绍一 */
+.win-about-1 {
+    width: 370px;
+    height: 220px;
+    /* background-color: #050505; */
+    margin-top: 30px;
+    /* background: url(http://testforht.rovn.ink/images/company_1.jpg) no-repeat 0 0; */
+    align-content: center;
+    align-items: center;
+    z-index: 90;
+    overflow: hidden;
+}
+.win-about-1-img {
+    position: relative;
+    margin-top: 0px;
+    overflow: hidden;
+}
+.win-about-1 a h2 {
+    width: 370px;
+    height: 220px;
+    font-size: 35px;
+    font-weight: 400;
+    color: #fff;
+    /* background-color: #05c9f5; */
+    position: absolute;
+    align-content: center;
+    margin-top: -225px;
+    margin-left: 0px;
+    text-align: center;
+}
+/* 介绍一的效果 */
+.win-about-1:hover img {
+    transform: scale(1.1);
+    transition: all 0.4s;
+}
+.win-about-1:hover h2 {
+    background-color: #225ff9;
+    opacity: 0.8;
+}
+/* 介绍二 */
+.win-about-2 {
+    width: 370px;
+    height: 220px;
+    /* background-color: #0b36f8; */
+    margin-top: 30px;
+    /* background: url(http://testforht.rovn.ink/images/company_2.jpg) no-repeat 0 0; */
+    align-items: center;
+    align-content: center;
+    z-index: 90;
+    overflow: hidden;
+}
+.win-about-2-img {
+    position: relative;
+    margin-top: 0px;
+    overflow: hidden;
+}
+.win-about-2 a h2 {
+    width: 370px;
+    height: 220px;
+    font-size: 35px;
+    font-weight: 400;
+    color: #fff;
+    /* background-color: #05c9f5; */
+    position: absolute;
+    align-content: center;
+    margin-top: -225px;
+    margin-left: 0px;
+    text-align: center;
+}
+/* 介绍二的效果 */
+.win-about-2:hover img {
+    transform: scale(1.1);
+    transition: all 0.4s;
+}
+.win-about-2:hover h2 {
+    background-color: #225ff9;
+    opacity: 0.8;
+}
+/* 介绍三 */
+.win-about-3 {
+    width: 370px;
+    height: 220px;
+    /* background-color: #ec0a0a; */
+    margin-top: 30px;
+    /* background: url(http://testforht.rovn.ink/images/company_3.jpg)  no-repeat 0 0; */
+    align-items: center;
+    align-content: center;
+    z-index: 90;
+    overflow: hidden;
+}
+.win-about-3-img {
+    position: relative;
+    margin-top: 0px;
+    overflow: hidden;
+}
+.win-about-3 a h2 {
+    width: 370px;
+    height: 220px;
+    font-size: 35px;
+    font-weight: 400;
+    color: #fff;
+    /* background-color: #05c9f5; */
+    position: absolute;
+    align-content: center;
+    margin-top: -225px;
+    margin-left: 0px;
+    text-align: center;
+}
+/* 介绍三的效果 */
+.win-about-3:hover img {
+    transform: scale(1.1);
+    transition: all 0.4s;
+}
+.win-about-3:hover h2 {
+    background-color: #225ff9;
+    opacity: 0.8;
+}
+/* 点击图 */
+.win-connect {
+    width: 100%;
+    height: 550px;
+    background-color: #1d2222;
+    overflow: hidden;
+}
